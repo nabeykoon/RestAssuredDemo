@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f1714b28-bfa7-4474-a504-be868048ce3f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="C:\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ax8fpPidrrcQk3bM6fC2EhyIwH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../appiumTestProject" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f1714b28-bfa7-4474-a504-be868048ce3f" name="Default Changelist" comment="" />
+      <created>1587665990088</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587665990088</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="872" y="358" key="#Plugins" timestamp="1587667720311">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="872" y="358" key="#Plugins/0.0.2560.1400@0.0.2560.1400" timestamp="1587667720311" />
+    <state x="1430" y="407" key="#Project_Structure" timestamp="1587666710945">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1430" y="407" key="#Project_Structure/0.0.2560.1400@0.0.2560.1400" timestamp="1587666710945" />
+    <state x="883" y="960" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587667633231">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="883" y="960" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1400@0.0.2560.1400" timestamp="1587667633231" />
+    <state x="390" y="406" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1587666034275">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="390" y="406" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1587666034275" />
+    <state x="1024" y="352" key="FileChooserDialogImpl" timestamp="1587667950075">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1024" y="352" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1587667950075" />
+    <state x="1176" y="510" key="SettingsEditor" timestamp="1587667502526">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1176" y="510" key="SettingsEditor/0.0.2560.1400@0.0.2560.1400" timestamp="1587667502526" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1587667701315">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400@0.0.2560.1400" timestamp="1587667701315" />
+  </component>
+</project>
