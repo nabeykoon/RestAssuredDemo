@@ -16,3 +16,4 @@ Feature:
   Scenario: Verify queryParam of get
     Given I perform GET operation for "/posts"
     Then I should verify GET queryParameter
+
