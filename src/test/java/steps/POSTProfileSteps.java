@@ -1,10 +1,12 @@
 package steps;
 
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseOptions;
+import org.hamcrest.core.IsNot;
 import utilities.RestAssuredExtension;
 
 import java.util.HashMap;
@@ -35,5 +37,24 @@ public class POSTProfileSteps {
     @Then("I should see the body has name as {string}")
     public void iShouldSeeTheBodyHasNameAs(String name) {
         assertThat(response.getBody().jsonPath().get("name"), equalTo(name));
+    }
+
+    @And("I perform PUT operation for {string}")
+    public void iPerformPUTOperationFor(String url, DataTable table) {
+        HashMap<String, String> body= new HashMap<>();
+        body.put("id", table.cell(1,0));
+        body.put("title", table.cell(1,1));
+        body.put("author", table.cell(1,2));
+
+        HashMap<String, String> pathParams= new HashMap<>();
+        pathParams.put("postId", table.cell(1,0));
+
+        //Perform PUT operation
+        response = RestAssuredExtension.PUTOpsWithBodyAndPathParams(url, body, pathParams);
+    }
+
+    @Then("I should see the body with title as {string}")
+    public void iShouldSeeTheBodyWithTitleAs(String title) {
+        assertThat(response.getBody().jsonPath().get("title"), equalTo(title));
     }
 }

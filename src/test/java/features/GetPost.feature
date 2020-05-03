@@ -17,3 +17,17 @@ Feature:
     Given I perform GET operation for "/posts"
     Then I should verify GET queryParameter
 
+  Scenario: Verify GET operation with bearer authentication token
+    Given I perform authentication operation for "/auth/login" with body
+      | email             | password |
+      | nilson3@email.com | nilson   |
+    Given I perform GET operation for "/posts/1"
+    Then I should see the author name as "Karthik KK"
+
+  Scenario: Verify GET operation with bearer authentication token for json schema validation
+    Given I perform authentication operation for "/auth/login" with body
+      | email             | password |
+      | nilson3@email.com | nilson   |
+    Given I perform GET operation for "/posts/1"
+    Then I should see the author name as "Karthik KK" with json validation
+
