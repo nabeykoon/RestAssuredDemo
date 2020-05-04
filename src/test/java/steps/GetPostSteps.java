@@ -37,14 +37,18 @@ public class GetPostSteps {
     @Then("I should see the author name as {string}")
     public void iShouldSeeTheAuthorNameAs(String authorName) {
 
-        var posts = new Posts.Builder().build();
-        var post = response.getBody().as(posts.getClass());
-        assertThat(post.getAuthor(), equalTo(authorName));
+        //with builder but no lombok
+/*      Posts posts = Posts.builder().build();
+        Posts post = response.getBody().as(posts.getClass());
+        assertThat(post.getAuthor(), equalTo(authorName));*/
 
+        // with lombok builder
+        var posts = response.getBody().as(Posts.class);
+        assertThat(posts.getAuthor(), equalTo(authorName));
         //without builder pattern
-       // var posts = response.getBody().as(Posts.class);
-        //assertThat(posts.getAuthor(), equalTo(authorName));
-        //assertThat(response.getBody().jsonPath().get("author"), hasItem("Karthik KK"));
+/*       var posts = response.getBody().as(Posts.class);
+        assertThat(posts.getAuthor(), equalTo(authorName));
+        assertThat(response.getBody().jsonPath().get("author"), hasItem("Karthik KK"));*/
     }
 
     @Then("I should see the author names")
