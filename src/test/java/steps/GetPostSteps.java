@@ -11,6 +11,7 @@ import io.restassured.response.ResponseOptions;
 import org.hamcrest.core.IsNot;
 import pojo.Address;
 import pojo.Location;
+import pojo.LoginBody;
 import pojo.Posts;
 import utilities.APIConstant;
 import utilities.RestAssuredExtension;
@@ -30,14 +31,19 @@ public class GetPostSteps {
     //Anti pattern mixing rest assured bdd and cucumber bdd together
     @Given("I perform GET operation for {string}")
     public void iPerformGETOperationFor(String url) {
-        response = RestAssuredExtension.GetOpsWithToken(url, response.getBody().jsonPath().get("access_token"));
+        response = RestAssuredExtension.GetOpsWithToken(url, token);
     }
 
     @Then("I should see the author name as {string}")
     public void iShouldSeeTheAuthorNameAs(String authorName) {
 
-        var posts = response.getBody().as(Posts.class);
-        assertThat(posts.getAuthor(), equalTo(authorName));
+        var posts = new Posts.Builder().build();
+        var post = response.getBody().as(posts.getClass());
+        assertThat(post.getAuthor(), equalTo(authorName));
+
+        //without builder pattern
+       // var posts = response.getBody().as(Posts.class);
+        //assertThat(posts.getAuthor(), equalTo(authorName));
         //assertThat(response.getBody().jsonPath().get("author"), hasItem("Karthik KK"));
     }
 
@@ -99,13 +105,17 @@ public class GetPostSteps {
 
     @Given("I perform authentication operation for {string} with body")
     public void iPerformAuthenticationOperationForWithBody(String uri, DataTable table) {
-        HashMap<String, String> body = new HashMap<>();
+     /*   HashMap<String, String> body = new HashMap<>();
         body.put("email", table.cell(1, 0));
-        body.put("password", table.cell(1, 1));
+        body.put("password", table.cell(1, 1));*/
+
+        LoginBody loginBody = new LoginBody();
+        loginBody.setEmail(table.cell(1, 0));
+        loginBody.setPassword(table.cell(1, 1));
 
         // response = RestAssuredExtension.PostOpsWithBody(url, body);
         RestAssuredExtensionV2 restAssuredExtensionV2 = new RestAssuredExtensionV2(uri, APIConstant.ApiMethods.POST, null);
-        token = restAssuredExtensionV2.Authenticate(body);
+        token = restAssuredExtensionV2.Authenticate(loginBody);
     }
 
     @Given("I perform GET operation with query parameter for address {string}")
